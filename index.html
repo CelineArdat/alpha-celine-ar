@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Apple</title>
+  <link rel="icon" type="image/x-icon" href="https://static-00.iconduck.com/assets.00/apple-logo-icon-416x512-8ho6gnb7.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Figtree', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+    }
+
+    .navbar a {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #555;
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #ffcc00;
+    }
+
+    .slideshow-container {
+      max-width: 900px;
+      position: relative;
+      margin: 40px auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      text-align: center;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 12px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: #ffcc00;
+      color: black;
+    }
+
+    .dot-container {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #ffcc00;
+    }
+
+    .fade {
+      animation: fade 1s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: #ffcc00;
+      margin: 30px 0;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a img {
+      transition: transform 0.3s ease;
+    }
+
+    a img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a class="active" href="index.html">Apple</a>
+    <a href="iPhone.html">iPhone</a>
+    <a href="iPad.html">iPad</a>
+    <a href="watch.html">Watch</a>
+    <a href="airpods.html">AirPods</a>
+  </div>
+
+  <center>
+    <div id="Apple_div">
+      <h1>Apple</h1>
+      <a href="https://www.apple.com">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png" alt="The logo" width="50" height="60">
+      </a>
+    </div>
+  </center>
+
+  <hr>
+
+  <div class="slideshow-container">
+
+    <div class="slide fade">
+      <h1>Apple History</h1>
+      <p>Apple Inc. is an American technology company founded in 1976 by Steve Jobs,
+        Steve Wozniak, and Ronald Wayne<br> in a garage in California...</p>
+      <img src="https://pbs.twimg.com/media/GKGPfeWW8AADpgq.jpg" alt="Appler">
+    </div>
+
+    <div class="slide fade">
+      <h1>Steve Jobs</h1>
+      <p>Steve Jobs was an American entrepreneur, inventor, and visionary best
+        known as the co-founder of Apple Inc...</p>
+      <img src="steve.png" alt="Steve Jobs">
+    </div>
+
+    <div class="slide fade">
+      <h1>Steve Wozniak</h1>
+      <p>Steve Wozniak is an American electronics engineer, inventor, and co-founder of Apple Inc...</p>
+      <img src="https://media.licdn.com/dms/image/v2/D4D12AQGoKZ8ehzz5fg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1688474488585?e=2147483647&v=beta&t=k5KquMh9qQ-jrQgEpIEG8FypFzvEPnK2gdDjFv23PKo" alt="Wozniak">
+    </div>
+
+    <div class="slide fade">
+      <h1>Ronald Wayne</h1>
+      <p>Ronald Wayne is an American businessman and co-founder of Apple Inc., who played a brief but notable role...</p>
+      <img src="https://static.india.com/wp-content/uploads/2023/07/ron-wayne-.jpg?impolicy=Medium_Resize&w=1200&h=800" alt="Wayne">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+  <hr>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+    }
+  </script>
+
+</body>
+
+</html>
